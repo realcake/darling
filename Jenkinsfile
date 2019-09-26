@@ -9,7 +9,7 @@ pipeline {
                 sh 'git submodule update --recursive --init'
                 sh 'cmake -E remove_directory build'
                 sh 'cmake -Bbuild -H.'
-                sh 'cmake --build build'
+                sh 'cmake --build build -- -j4'
             }
         }
     }
